@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-container">
+    <nav class="navbar">UNIT <span>CONVERTER</span></nav></div>
+    <hr>
+    <section class="main">
+        <div class="container">
+            <div class="select">
+                <ul class="list">
+                    <li onclick="selectUnit('length')">Length</li>
+                    <li onclick="selectUnit('weight')">Weight</li>
+                    <li onclick="selectUnit('time')">Time</li>
+                    <li onclick="selectUnit('temperature')">Temperature</li>
+                </ul>
+            </div>
+            <div id="unitSelection" class='unit'>
+                <h2>Select Input Unit:</h2>
+                <select id="sourceUnit"></select>
+
+                <h2>Select Output Unit:</h2>
+                <select id="targetUnit"></select>
+                <br>
+                <br>
+                <input type="number" id="inputValue" placeholder="Enter the value to convert" onkeydown="if (event.keyCode === 13) performConversion()">
+                <button onclick="performConversion()">Convert</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </section>
+<script src="script.js"></script>
+</body>
+</html>
